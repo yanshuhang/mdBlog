@@ -2,7 +2,7 @@
 
 主题，一个抽象的概念，是已发布消息的分类；producer(生产者)发布消息到某个topic，consumer(消费者)订阅具体topic获取消息。topic由partition组成，每个tipic可以分为1个或多个partition
 
-![topic-partition](..\pic\log_anatomy.png)
+![topic-partition](pic\log_anatomy.png)
 
 ## partition
 
@@ -25,4 +25,4 @@ tipic是抽象的概念，partition是存储消息的实体，是有序的、不
 
 实际存储消息的是partition，而且partition通常都是多个的。consumer实际上订阅的是partition，kafka会平均分配consumer和partition之间的数量对应，可以一个consumer对应多个partition，如果consumer数量比partition多，就会出现有consumer空闲的情况。
 
-![partition-consumer](..\pic\log_anatomy01.png)
+![partition-consumer](pic\log_anatomy01.png)
