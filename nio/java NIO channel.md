@@ -1,0 +1,3 @@
+# Channels and Buffers
+
+NIO中的io操作都是从Channel开始，数据从Channel读到一个Buffer中，也可以从一个Buffer写到Channel
