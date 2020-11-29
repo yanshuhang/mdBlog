@@ -25,7 +25,7 @@
 遍历一遍比较是否有一样的子串：
 
 * 首字符的匹配可以过滤很多错误答案
-* 只需循环到两个字符串长度差的位置，后面的长度过短不可能匹配上
+* 只需循环到两个字符串长度差的位置，后面的长度过短不可能匹配
 
 ``` java
 public static int solution(String haystack, String needle) {
