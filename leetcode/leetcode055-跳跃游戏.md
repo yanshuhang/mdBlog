@@ -16,7 +16,7 @@
 public boolean solution1(int[] nums) {
     int max = 0;
     for (int i = 0; i < nums.length; i++) {
-        // 如果当前索引不在最大位置以内,后面的也跳不大,所以返回false
+        // 如果当前索引不在最大位置以内,后面直接就跳不到了,所以返回false
         if (i > max) {
             return false;
         }
