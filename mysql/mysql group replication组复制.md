@@ -7,7 +7,8 @@
 ## mysql配置
 
 ``` conf
-[mysqld]                                                                          disabled_storage_engines="MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY"
+[mysqld]
+disabled_storage_engines="MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY"
 
 # 每个实例配置需要配置成不同的id
 server_id=1
