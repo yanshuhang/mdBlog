@@ -44,7 +44,7 @@ bind_address = 0.0.0.0
 bind_port = 3300
 # router容器跟group replication使用同一个docker网络
 # 可以使用容器名代替ip地址
-destinations = db1:3306,db2:3306,db3:3306
+destinations = db1:3306
 routing_strategy = first-available
 
 [routing:secondary]
@@ -61,9 +61,6 @@ routing_strategy = round-robin
 * routing_strategy 路由策略
   * first-available: 使用第一个可用的连接,如果失败使用下一个连接,会循环判断直到没有可用的连接
   * round-robin: 每个新连接会连接到下一个可用的连接,轮询的负载均衡
-
-这里的`primary`对应mysql主服务器,只用于写,但是配置了所有的地址,这是因为在`mysql group replication`中主服务器宕机后会推举出新的主服务器,这样配合`first-available`的路由策略可以在主服务器宕机后连接到新的主服务器  
-`secondary`对应所有的服务器用于读, 轮询进行负载
 
 ## 启动容器
 
