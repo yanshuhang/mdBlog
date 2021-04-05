@@ -5,6 +5,8 @@
 指令：然后一路回车就行了，期间要输入文件名、密码（这个就可以省了）  
 生成了公钥和私钥，pub格式的时公钥
 
+* 以管理员身份运行terminal
+
 ``` text
 ssh-keygen -t rsa
 ```
@@ -17,7 +19,7 @@ ssh-keygen -t rsa
 # 发送到服务器
 scp C:\Users\sytem\.ssh\sshkey.pub ysh@192.168.199.128:/tmp
 
-# 添加到文件的末尾
+# 添加到文件的末尾， 如果没有自行在用户目录下创建
 cat /tmp/sshkey.pub >> ~/.ssh/authorized_keys
 ```
 
@@ -41,5 +43,5 @@ config中可以配置多个Host
 Host vm
     HostName 192.168.199.128
     User ysh
-    IdentityFile sshkey
+    IdentityFile .ssh/sshkey
 ```
