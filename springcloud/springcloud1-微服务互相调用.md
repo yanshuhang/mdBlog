@@ -42,7 +42,7 @@ public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
 
 定义 `consumer` 项目接口8082，在浏览器中访问 <http://localhost:8082/consume> 可以看到成功返回了 `producer` 服务结果
 
-## 使用WebClient的使用
+## 使用WebClient访问producer
 
 ``` Java
 @Autowired
