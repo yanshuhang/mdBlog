@@ -213,7 +213,6 @@ Successful call count: 0 | failed call count: 2 | failure rate %:-1.0 | state: H
 * instans中是熔断器的名称，可以配置多个，用于注解中标注service使用的是哪个熔断器，baseConfig指定了使用的配置名称，就是configs中的；也可以指定配置项，会覆盖configs中的同名配置项
 * Predicate和Exception需要配置为全限定名称，Predicate只能配置一个，Exceptions可以配置多个，按列表的形式配置；测试代码中没有使用到，这里只是展示下怎样配置
 
-
 ``` yml
 resilience4j.circuitbreaker:
   configs:
