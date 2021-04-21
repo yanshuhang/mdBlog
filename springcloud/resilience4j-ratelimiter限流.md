@@ -189,8 +189,6 @@ resilience4j.ratelimiter:
       timeoutDuration: 10s
 ```
 
-注解
-
 注解`@Bulkhead`有两个属性：
 
 * name：ratelimiter的名称，对应yml文件中instances中的配置
@@ -210,8 +208,6 @@ public class ExternalLowRateService {
     }
 }
 ```
-
-测试方法
 
 测试方法，没有显式的bulkhead配置和创建，直接执行服务调用即可，结果返回跟上面的测试一样
 
