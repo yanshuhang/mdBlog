@@ -27,7 +27,7 @@ public final native Class<?> getClass();
 * 返回对象的运行时类，即Class对象
 * @HotSpotIntrinsicCandidate注解：Java 9引入的新特性，JDK的源码中，被@HotSpotIntrinsicCandidate标注的方法，在HotSpot中都有一套高效的实现，该高效实现基于CPU指令，运行时，HotSpot维护的高效实现会替代JDK的源码实现，从而获得更高的效率。
 * final方法：final修饰的方法不能被子类重写
-    * final修饰符的其他作用：1. 修饰的类不能被继承 2. 修饰的变量不能被修改：基本类型值不能被修改，引用类型不能指向其他对象(其指向的对象本身可修改)
+  * final修饰符的其他作用：1. 修饰的类不能被继承 2. 修饰的变量不能被修改：基本类型值不能被修改，引用类型不能指向其他对象(其指向的对象本身可修改)
 
 **hashcode()**:
 
@@ -42,7 +42,7 @@ public native int hashCode();
 * 如果equals方法返回相同，则两个对象必须返回相同的hash值
 * 如果equals方法返回不同，两个对象hash值可以是相同的，不同的对象返回不同的hash值可以提高哈希表的性能
 
-**equals()**
+**equals()**:
 
 ```java
 public boolean equals(Object obj) {
